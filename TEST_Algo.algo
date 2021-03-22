@@ -11,8 +11,9 @@ write("votre phrase doit se terminer par un point ");
 read(CH);
 N:=CH.length;
 UNTIL (CH[N]=".")
-
-FOR i := 1 to N DO
+NBW:= 1;
+NBV:= 0;
+FOR i FROM 1 to N-1 STEP 1 DO
 IF (CH[i] == " ") THEN
 NBW:= NBW+1;
 ELSE IF ( CH[i] in UPCASE('a','e','u','i','o','y')) THEN
