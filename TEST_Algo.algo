@@ -1,0 +1,26 @@
+ALGORITHM TEST1
+
+VAR 
+CH : STRING;
+NBW, NBV,N,i: INTEGER;
+
+BEGIN
+
+repeat
+write("votre phrase doit se terminer par un point ");
+read(CH);
+N:=CH.length;
+UNTIL (CH[N]=".")
+
+FOR i := 1 to N DO
+IF (CH[i] == " ") THEN
+NBW:= NBW+1;
+ELSE IF ( CH[i] in UPCASE('a','e','u','i','o','y')) THEN
+NBV:=NBV+1;
+END_IF
+END_FOR
+write("la longueur de CH :",N);
+write("le nombre de mots : ",NBW); 
+write("le nombre de voyelles : ",NBV); 
+
+END
